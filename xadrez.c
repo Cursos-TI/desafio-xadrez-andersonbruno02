@@ -26,7 +26,19 @@ void movimentacaoNovato() {
     }
 }
 
+void movimentacaoAventureiro() {
+    printf("\nMovimentação do Cavalo:\n");
+    for (int i = 1; i <= 2; i++) {
+        printf("Cima - Casa %d\n", i);
+    }
+    for (int i = 1; i <= 1; i++) {
+        printf("Direita - Casa %d\n", i);
+    }
+}
+
 int main() {
     movimentacaoNovato();
+    movimentacaoAventureiro();
+    
     return 0;
 }
