@@ -36,9 +36,34 @@ void movimentacaoAventureiro() {
     }
 }
 
+void movimentarBispo(int casas) {
+    if (casas > 0) {
+        printf("Diagonal Superior Direita - Casa %d\n", casas);
+        movimentarBispo(casas - 1);
+    }
+}
+
+// Função recursiva para movimentação da Torre
+void movimentarTorre(int casas) {
+    if (casas > 0) {
+        printf("Direita - Casa %d\n", casas);
+        movimentarTorre(casas - 1);
+    }
+}
+
+// Função recursiva para movimentação da Rainha
+void movimentarRainha(int casas) {
+    if (casas > 0) {
+        printf("Esquerda - Casa %d\n", casas);
+        movimentarRainha(casas - 1);
+    }
+}
+
 int main() {
     movimentacaoNovato();
     movimentacaoAventureiro();
-    
+    movimentarBispo(5);
+    movimentarTorre(5);
+    movimentarRainha(8);
     return 0;
 }
